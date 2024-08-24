@@ -32,6 +32,7 @@ class HomeFragment: Fragment() {
         sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
 
         binding.selectMealBtn.setOnClickListener {
+            sharedViewModel.currentJourney = "Journey1"
             sharedViewModel.setOnHomeScreen(false)
         }
 
@@ -39,7 +40,11 @@ class HomeFragment: Fragment() {
             sharedViewModel.setOnHomeScreen(true)
         }
 
-        sharedViewModel.onHomeScreen.observe(viewLifecycleOwner){it->
+        sharedViewModel.onHomeScreen.observe(viewLifecycleOwner){
+
+            changeSelection(binding.upJourneyBtn, true)
+            changeSelection(binding.downJourneyBtn, false)
+
             binding.backBtn.visibility = if(it) View.GONE else View.VISIBLE
             binding.skipBtn.visibility = if(it) View.GONE else View.VISIBLE
             binding.proceedBtn.visibility = if(it) View.GONE else View.VISIBLE
