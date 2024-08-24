@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow_theme">#EB9F0B</color>
+    <color name="dark_theme_blue">#011130</color>
+    <color name="light_grey">#F4F4F4</color>
+    <color name="selected_light_orange">#FDF5E7</color>
+    <color name="selected_stroke_orange">#FF9800</color>
+    <color name="selected_food_item_bg">#4CAF50</color>
+</resources>
